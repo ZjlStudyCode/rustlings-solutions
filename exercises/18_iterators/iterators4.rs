@@ -10,6 +10,8 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    #[allow(clippy::unnecessary_fold)]
+    (1..=num).clone().fold(1, |acc: u64, result| acc * result) 
 }
 
 fn main() {
